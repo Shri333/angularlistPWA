@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-danger bg-gradient">
+  <span class="navbar-brand mx-auto text-light fs-3 fw-bold"
+    >Angular Todo List</span
+  >
+</nav>
+<div class="w-80 container mt-4">
+  <div class="input-group input-group-lg mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Task"
+      [(ngModel)]="item"
+      (keyup.enter)="addItem()"
+    />
+    <button type="button" class="btn btn-danger" (click)="addItem()">
+      Add Task
+    </button>
+  </div>
+  <div>
+    <app-item
+      *ngFor="let item of items; index as i"
+      [item]="item"
+      [index]="i"
+    ></app-item>
+  </div>
+</div>

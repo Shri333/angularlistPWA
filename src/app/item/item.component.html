@@ -1,0 +1,11 @@
+<div class="input-group input-group-lg mb-3">
+  <input
+    type="text"
+    class="form-control"
+    [value]="item"
+    (change)="changeItem($event.target.value)"
+  />
+  <button type="button" class="btn btn-danger" (click)="deleteItem()">
+    Delete
+  </button>
+</div>
